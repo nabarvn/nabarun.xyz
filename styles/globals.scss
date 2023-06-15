@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overscroll-behavior: none;
+  // font-family: "Montserrat", sans-serif;
+  // font-family: "Oxygen", sans-serif;
+  // font-family: "Poppins", sans-serif;
+}
+
+#__next {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overscroll-behavior: none;
+  margin-bottom: 0%;
+}
+
+footer {
+  margin-top: auto;
+  overscroll-behavior: none;
+  margin-bottom: 0%;
+}
+
+@layer base {
+  body {
+    @apply bg-light-gray dark:bg-night-black scrollbar-thin scrollbar-track-transparent scrollbar-thumb-blue-900 dark:scrollbar-thumb-night-gray;
+  }
+}
+
+input[type="text"]:focus ~ .place-holder,
+input[type="text"]:not(:placeholder-shown) ~ .place-holder {
+  @apply text-cyan-700 dark:text-cyan-300 not-italic font-semibold bg-white dark:bg-night-gray transform -translate-y-5 -translate-x-2 scale-75;
+}
+
+textarea:focus ~ .place-holder,
+textarea:not(:placeholder-shown) ~ .place-holder {
+  @apply text-cyan-700 dark:text-cyan-300 not-italic font-semibold bg-white dark:bg-night-gray transform -translate-y-5 -translate-x-5 scale-75;
+}
+
+.text-shadow {
+  text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
